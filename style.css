@@ -5,7 +5,6 @@ Light grayish cyan: hsl(185, 41%, 84%)
 Light grayish cyan: hsl(189, 41%, 97%)
 White: hsl(0, 0%, 100%) */
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 :root{
     --dark_cyan: hsl(183, 100%, 15%);
@@ -16,18 +15,34 @@ White: hsl(0, 0%, 100%) */
 --White_clr: hsl(0, 0%, 100%)
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 *{
   padding: 0;
   margin: 0;
+  font-family: 'Space Mono', monospace;
 }
 
 body{
     width: 100%;
     height: 100%;
-    font-family: "Space Mono";
-    background-color: rgb(105, 184, 187);
+    font-family: 'Space Mono', monospace;
+    background-color: #C5E4E7;
     overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .container{
@@ -35,11 +50,12 @@ body{
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     height: fit-content;
-    background-color: whitesmoke;
+    background-color: rgb(255, 255, 255);
     position: relative;
     padding: 25px;
     overflow-x: hidden;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -47,16 +63,17 @@ body{
 .left p{
     font-weight: 400;
     font-size: 18px;
-    color: var(--grayish_cyan1);
+    color: rgb(128, 128, 128);
     font-weight: bold;
 }
 .billWrap{
     position: relative;
+    margin-bottom: 15px;
 }
 
 .billWrap p{
     font-size: 24px;
-    color: rgb(190, 189, 189);
+    color: rgb(204, 204, 204);
     font-weight: 400;
     margin-left: 10px;
 }
@@ -64,6 +81,7 @@ body{
 .billPlaceholder{
     position: absolute;
     top: 20%;
+    color: rgb(190, 190, 190);
     z-index: 10;
 }
 
@@ -71,48 +89,141 @@ body{
     border: none;
     border-radius: 5px;
     padding: 0px 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 24px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    font-size: 20px;
     margin: 10px 0;
     text-align: right;
     color: var(--dark_cyan);
     position: relative;
-    background-color: hsl(187, 19%, 92%);
+    background-color: #F3F8FB;
 }
 .inputStyle:focus{
     outline: none;
 }
 
 .tipsInPerc{
+    margin-top: 15px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 15px;
+    grid-gap: 10px;
 }
 
 .perBtn{
     width: 100%;
-    height: 50px;
+    padding: 5px 0;
     text-align: center;
-    padding:10px 50px;
-
+    padding:5px 50px;
+    outline: none;
+    border: none;
+    background-color: #00474B;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 24px;
+    
+}
+.perBtn:hover{
+    background-color: #26C2AD;
+    color: #00464A;
+}
+.perBtn:focus{
+    background-color: #26C2AD;
+    color: #00464A;
 }
 .perInput.inputStyle{
     width: 95%;
+    background-color: #F3F8FB;
     text-align: right;
     padding: 0;
     height: 100%;
     margin: 0;
+    color: var(--dark_cyan);
     padding-right: 8px;
 
 }
 
 .perInput::placeholder{
     font-weight: 700;
-    font-size: 20px;
+    font-size: 24px;
+    padding-right: 10px;
     color: var(--dark_cyan);
 }
+.noOfPeople{
+    margin-top: 15px;
+    position: relative;
+}
+.noOfPeople p{
+    margin-bottom: 10px;
+}
 
+.userContainer{
+    position: relative;
+}
 
+.icon{
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    color: rgb(190, 190, 190);
+    font-size: 20px;
+    z-index: 10;
+}
+#noOfPeople{
+    font-weight: 700;
+}
 
+.right{
+    background-color: var(--dark_cyan);
+    border-radius: 15px;
+    margin-top: 10px;
 
+}
+
+.amount{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.names h2{
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(236, 236, 236);
+}
+.names p{
+    font-size: 12px;
+    color: rgb(179, 179, 179);
+}
+
+.total p{
+    font-weight: 700;
+    font-size: 30px;
+    color: rgb(56, 187, 148);
+}
+
+.resetBtn{
+    padding: 8px 120px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin: 25px 25px;
+    background-color: rgb(56, 187, 148);
+    color: var(--dark_cyan);
+    border: none;
+    font-size: 24px;
+    font-weight: 700;
+}
+ @media screen and (min-width: 780px){
+     .container{
+         max-width: 700px;
+         flex-direction: row;
+         border-radius: 15px;
+     }
+     .right{
+        margin-left: 40px;
+     }
+     .resetBtn{
+         margin-top: 100px;
+     }
+
+ }
