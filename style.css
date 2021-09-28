@@ -1,0 +1,118 @@
+/* Very dark cyan: hsl(183, 100%, 15%)
+Dark grayish cyan: hsl(186, 14%, 43%)
+Dark grayish cyan: hsl(184, 14%, 56%)
+Light grayish cyan: hsl(185, 41%, 84%)
+Light grayish cyan: hsl(189, 41%, 97%)
+White: hsl(0, 0%, 100%) */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root{
+    --dark_cyan: hsl(183, 100%, 15%);
+--grayish_cyan: hsl(186, 14%, 43%)
+--grayish_cyan1: hsl(184, 14%, 56%)
+-- grayish_cyan2: hsl(185, 41%, 84%)
+-- grayish_cyan: hsl(189, 41%, 97%)
+--White_clr: hsl(0, 0%, 100%)
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-family: "Space Mono";
+    background-color: rgb(105, 184, 187);
+    overflow-x: hidden;
+}
+
+.container{
+    margin-top: 100px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: fit-content;
+    background-color: whitesmoke;
+    position: relative;
+    padding: 25px;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left p{
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--grayish_cyan1);
+    font-weight: bold;
+}
+.billWrap{
+    position: relative;
+}
+
+.billWrap p{
+    font-size: 24px;
+    color: rgb(190, 189, 189);
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.billPlaceholder{
+    position: absolute;
+    top: 20%;
+    z-index: 10;
+}
+
+.inputStyle{
+    border: none;
+    border-radius: 5px;
+    padding: 0px 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 24px;
+    margin: 10px 0;
+    text-align: right;
+    color: var(--dark_cyan);
+    position: relative;
+    background-color: hsl(187, 19%, 92%);
+}
+.inputStyle:focus{
+    outline: none;
+}
+
+.tipsInPerc{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.perBtn{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding:10px 50px;
+
+}
+.perInput.inputStyle{
+    width: 95%;
+    text-align: right;
+    padding: 0;
+    height: 100%;
+    margin: 0;
+    padding-right: 8px;
+
+}
+
+.perInput::placeholder{
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--dark_cyan);
+}
+
+
+
+

@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Tip calculator app</title>
-
+  <link rel="stylesheet" href="style.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -15,7 +15,33 @@
   </style>
 </head>
 <body>
-  <p>Bill</p>
+  <div class="container">
+    <div class="left">
+      <p>Bill</p>
+      
+       <div class="billWrap">
+         <p class="billPlaceholder">$</p>
+         <input type="number" name="bill" id="bill_amount" class="inputStyle">
+        </div>
+       <p>Select Tip %</p>
+       <div class="tipsInPerc">
+         <button class="perBtn">5%</button>
+         <button class="perBtn">10%</button>
+         <button class="perBtn">15%</button>
+         <button class="perBtn">25%</button>
+         <button class="perBtn">50%</button>
+         <input type="number" name="custome" class="inputStyle perInput perBtn" placeholder="Custom">
+       </div>
+       <p>Number of People</p>
+       <div>
+          <div class="icon"></div>
+          <input type="number" name="Peoples" id="noOfPeople"  class="inputStyle">
+       </div>
+    </div>
+  </div>
+     
+
+
   
 
   Select Tip %
