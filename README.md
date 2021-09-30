@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Pic](screenshot.jpg)
+![Pic](https://github.com/nameson2672/Tip-calculator/blob/master/screenshot.JPG)
 
 ## My process
 
