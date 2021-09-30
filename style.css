@@ -100,6 +100,7 @@ body{
 }
 .inputStyle:focus{
     outline: none;
+    border: 1px solid #2629c2;
 }
 
 .tipsInPerc{
@@ -141,6 +142,10 @@ body{
     color: var(--dark_cyan);
     padding-right: 8px;
 
+}
+
+.perInput.inputStyle:hover{
+    border: 1px solid #2629c2;
 }
 
 .perInput::placeholder{
@@ -212,6 +217,25 @@ body{
     border: none;
     font-size: 24px;
     font-weight: 700;
+}
+.resetBtn:hover{
+     background-color: rgb(133, 184, 168);
+}
+.showError{
+    border: 1px solid rgb(243, 61, 61);
+}
+#per{
+    opacity: 1;
+    padding: 100px;
+
+}
+.textError{
+    color:red;
+    font-size: 12px;
+    line-height:10px;
+    margin-top: 5px;
+    display:none;
+
 }
  @media screen and (min-width: 780px){
      .container{

@@ -24,20 +24,20 @@
   <div class="container">
     <div class="left">
       <p>Bill</p>
-      
        <div class="billWrap">
          <p class="billPlaceholder">$</p>
          <input type="number" name="bill" id="bill_amount" class="inputStyle">
         </div>
        <p>Select Tip %</p>
        <div class="tipsInPerc">
-         <button class="perBtn">5%</button>
-         <button class="perBtn">10%</button>
-         <button class="perBtn">15%</button>
-         <button class="perBtn">25%</button>
-         <button class="perBtn">50%</button>
-         <input type="number" name="custome" class="inputStyle perInput perBtn" placeholder="Custom">
+         <button class="perBtn perBtns" data-per="5" >5%</button>
+         <button class="perBtn perBtns" data-per="10">10%</button>
+         <button class="perBtn perBtns" data-per="15">15%</button>
+         <button class="perBtn perBtns" data-per="25">25%</button>
+         <button class="perBtn perBtns" data-per="50">50%</button>
+         <input type="number" name="custome" class="inputStyle perInput perBtn" placeholder="Custom" id="customPer">
        </div>
+       <h1 class="textError">Please select or input custome Tip in percent.</h1>
        <div class="noOfPeople">
          <p>Number of People</p>
          <div class="userContainer">
@@ -53,16 +53,16 @@
           <p>/ person</p>
         </div>
         <div class="total">
-          <p>$4.21</p>
+          <p>$0.00</p>
         </div>
       </div>
       <div class="amount">
         <div class="names">
-          <h2>Tip Amount</h2>
+          <h2>Total</h2>
           <p>/ person</p>
         </div>
-        <div class="total">
-          <p>$4.21</p>
+        <div class="total totalForAll">
+          <p>$0.00</p>
         </div>
       </div>
       <button class="resetBtn">reset</button>
@@ -95,5 +95,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="app.js"></script>
 </body>
 </html>
