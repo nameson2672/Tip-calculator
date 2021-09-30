@@ -45,6 +45,10 @@ body{
     flex-direction: column;
 }
 
+.text_top{
+    margin-top: 75px;
+    text-align: center;
+}
 .container{
     margin-top: 100px;
     border-top-left-radius: 20px;
